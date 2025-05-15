@@ -13,7 +13,6 @@
 @layer base {
   body {
     font-family: "Montserrat", sans-serif;
-    background-color: var(--custom-bg);
   }
 }
 
