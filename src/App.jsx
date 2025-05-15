@@ -1,11 +1,19 @@
-import React from 'react'
+import React from "react";
+import Navbar from "./layouts/Navbar";
+import Footer from "./layouts/Footer";
+import Home from "./components/Home";
+import { ContextProvider } from "./contexts/dataContext";
 
 const App = () => {
   return (
-    <div>
-      <h1 className='text-red-500'>salam</h1>
-    </div>
-  )
-}
+    <ContextProvider>
+      <div className="container">
+        <Navbar />
+        <Home />
+        <Footer />
+      </div>
+    </ContextProvider>
+  );
+};
 
-export default App
+export default App;
