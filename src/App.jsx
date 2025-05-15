@@ -7,7 +7,7 @@ import { ContextProvider } from "./contexts/dataContext";
 const App = () => {
   return (
     <ContextProvider>
-      <div className="container">
+      <div>
         <Navbar />
         <Home />
         <Footer />

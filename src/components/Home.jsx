@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className='py-16 md:py-0 bg-(--custom-bg)'>
+    <div className='container py-16 md:py-0 bg-(--custom-bg)'>
       <p>Home</p>
       <p>Home</p>
       <p>Home</p>
