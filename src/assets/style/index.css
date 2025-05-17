@@ -8,11 +8,13 @@
   --custom-gray: #656565;
   --custom-red: #ff0852;
   --hover-color: #dde7dd;
+  --custom-border: #12121226;
 }
 
 @layer base {
   body {
     font-family: "Montserrat", sans-serif;
+    background-color: #fdfcfc;
   }
 }
 

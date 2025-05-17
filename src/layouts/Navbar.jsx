@@ -6,6 +6,12 @@ import { MdOutlineLocalPhone } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa6";
 import { TbBasket } from "react-icons/tb";
 import { RiCloseLargeFill } from "react-icons/ri";
+import { CiFacebook } from "react-icons/ci";
+import {
+  PiInstagramLogoLight,
+  PiTiktokLogo,
+  PiYoutubeLogoThin,
+} from "react-icons/pi";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -223,6 +229,32 @@ const Navbar = () => {
           </ul>
         </div>
       )}
+
+      {/* NAVBAR */}
+      <div className="flex flex-col">
+        <div className="container flex items-center justify-between">
+          <div className="flex items-center space-x-2 py-3 text-md">
+            <CiFacebook className="text-(--custom-gray) hover:text-(--custom-red) transition-all duration-300 cursor-pointer" />
+            <PiInstagramLogoLight className="text-(--custom-gray) hover:text-(--custom-red) transition-all duration-300 cursor-pointer" />
+            <PiYoutubeLogoThin className="text-(--custom-gray) hover:text-(--custom-red) transition-all duration-300 cursor-pointer" />
+            <PiTiktokLogo className="text-(--custom-gray) hover:text-(--custom-red) transition-all duration-300 cursor-pointer" />
+          </div>
+
+          <div className="flex items-center space-x-2 text-(--custom-gray) text-xs font-semibold">
+            <span className="cursor-pointer hover:text-(--custom-red) transition-all duration-300">
+              en
+            </span>
+            <span>|</span>
+            <span className="cursor-pointer hover:text-(--custom-red) transition-all duration-300">
+              ru
+            </span>
+          </div>
+        </div>
+
+        <hr className="text-(--custom-border)" />
+
+        <div className="container"></div>
+      </div>
     </div>
   );
 };
