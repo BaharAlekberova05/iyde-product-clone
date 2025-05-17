@@ -9,6 +9,7 @@
   --custom-red: #ff0852;
   --hover-color: #dde7dd;
   --custom-border: #12121226;
+  --custom-input-border: #a6a6a6;
 }
 
 @layer base {
