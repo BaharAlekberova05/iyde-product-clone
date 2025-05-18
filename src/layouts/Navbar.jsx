@@ -24,11 +24,11 @@ const Navbar = () => {
     if (isSidebarOpen) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflowY = "auto";
     }
 
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflowY = "auto";
     };
   }, [isSidebarOpen]);
 
@@ -229,7 +229,7 @@ const Navbar = () => {
 
         <hr className="text-(--custom-border)" />
 
-        <div className="container py-8 flex items-center justify-between">
+        <div className="container py-4 flex items-center justify-between">
           <div className="flex items-center space-x-8 w-1/2">
             <div className="size-[120px]">
               <a href="#">
@@ -263,7 +263,7 @@ const Navbar = () => {
             <div className="flex items-center space-x-6">
               <div className="flex flex-col items-center space-y-2 cursor-pointer group">
                 <FaRegUser className="size-[30px] group-hover:text-(--custom-red) transition-all duration-300" />
-                <span className="text-(--custom-black) text-xs group-hover:text-(--custom-red) transition-all duration-300">
+                <span className="text-(--custom-black) text-sm font-semibold group-hover:text-(--custom-red) transition-all duration-300">
                   Daxil ol
                 </span>
               </div>
@@ -275,13 +275,376 @@ const Navbar = () => {
                     0
                   </div>
                 </div>
-                <span className="text-(--custom-black) text-xs group-hover:text-(--custom-red) transition-all duration-300">
+                <span className="text-(--custom-black) text-sm font-semibold group-hover:text-(--custom-red) transition-all duration-300">
                   Səbət
                 </span>
               </div>
             </div>
           </div>
         </div>
+
+        {/* NAVBAR DROPDOWNS */}
+        <div className="container flex items-center justify-center relative">
+          <ul className="flex items-center space-x-8">
+            <li className="group relative">
+              <a
+                style={{ fontFamily: "Playfair Display" }}
+                href="#"
+                className="mb-1 flex items-center text-xl uppercase font-semibold text-[var(--custom-black)] transition-all duration-300"
+              >
+                Ətirlər
+                <FaChevronDown className="ml-2 group-hover:-rotate-180 transition-transform duration-300" />
+              </a>
+
+              {/* underline */}
+              <div className="h-1 w-full bg-(--custom-black) absolute bottom-0 left-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></div>
+
+              {/* Dropdown */}
+              <div className="absolute top-full left-0 z-50 w-[400px] rounded-xl bg-white shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 p-6 flex space-x-8">
+                {/* Column 1 */}
+                <div className="flex flex-col space-y-2 text-sm">
+                  <span className="font-bold text-[var(--custom-black)]">
+                    ÖZƏL KOLLEKSİYA
+                  </span>
+                  {[
+                    "Yeddi gözəl",
+                    "Xəmsə",
+                    "Qarabağ",
+                    "Sport",
+                    "Baku",
+                    "Baldini",
+                    "Day&Night",
+                    "Kids",
+                    "Twins",
+                    "Love",
+                    "Billionarie",
+                  ].map((item, idx) => (
+                    <a
+                      key={idx}
+                      href="#"
+                      className="text-[var(--custom-gray)] hover:text-[var(--custom-red)] transition-colors duration-300"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+
+                {/* Column 2 */}
+                <div className="flex flex-col space-y-2 text-sm">
+                  <span className="font-bold text-[var(--custom-black)]">
+                    ƏTİRLƏR
+                  </span>
+                  {[
+                    "Kişi ətirləri",
+                    "Qadın ətirləri",
+                    "Unisex ətirlər",
+                    "Uşaq ətirləri",
+                  ].map((item, idx) => (
+                    <a
+                      key={idx}
+                      href="#"
+                      className="text-[var(--custom-gray)] hover:text-[var(--custom-red)] transition-colors duration-300"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+
+                {/* Column 3 */}
+                <div className="flex flex-col space-y-2 text-sm">
+                  <span className="font-bold text-[var(--custom-black)]">
+                    MAŞIN ƏTİRLƏRİ
+                  </span>
+                  {[
+                    "Rudder",
+                    "Romantik",
+                    "Secret",
+                    "Speed",
+                    "Envy",
+                    "Mery",
+                  ].map((item, idx) => (
+                    <a
+                      key={idx}
+                      href="#"
+                      className="text-[var(--custom-gray)] hover:text-[var(--custom-red)] transition-colors duration-300"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </li>
+
+            <li className="group relative">
+              <a
+                style={{ fontFamily: "Playfair Display" }}
+                href="#"
+                className="mb-1 flex items-center text-xl uppercase font-semibold text-[var(--custom-black)] transition-all duration-300"
+              >
+                BRENDLƏR
+                <FaChevronDown className="ml-2 group-hover:-rotate-180 transition-transform duration-300" />
+              </a>
+
+              {/* underline */}
+              <div className="h-1 w-full bg-(--custom-black) absolute bottom-0 left-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></div>
+
+              {/* Dropdown */}
+              <div className="absolute top-full left-0 z-50 w-[400px] rounded-xl bg-white shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 p-6 flex space-x-8">
+                {/* Column 1 */}
+                <div className="flex flex-col space-y-2 text-sm">
+                  <span className="font-bold text-[var(--custom-black)]">
+                    ÖZƏL KOLLEKSİYA
+                  </span>
+                  {[
+                    "Yeddi gözəl",
+                    "Xəmsə",
+                    "Qarabağ",
+                    "Sport",
+                    "Baku",
+                    "Baldini",
+                    "Day&Night",
+                    "Kids",
+                    "Twins",
+                    "Love",
+                    "Billionarie",
+                  ].map((item, idx) => (
+                    <a
+                      key={idx}
+                      href="#"
+                      className="text-[var(--custom-gray)] hover:text-[var(--custom-red)] transition-colors duration-300"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+
+                {/* Column 2 */}
+                <div className="flex flex-col space-y-2 text-sm">
+                  <span className="font-bold text-[var(--custom-black)]">
+                    BRENDLƏR
+                  </span>
+                  {[
+                    "Kişi ətirləri",
+                    "Qadın ətirləri",
+                    "Unisex ətirlər",
+                    "Uşaq ətirləri",
+                  ].map((item, idx) => (
+                    <a
+                      key={idx}
+                      href="#"
+                      className="text-[var(--custom-gray)] hover:text-[var(--custom-red)] transition-colors duration-300"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+
+                {/* Column 3 */}
+                <div className="flex flex-col space-y-2 text-sm">
+                  <span className="font-bold text-[var(--custom-black)]">
+                    MAŞIN ƏTİRLƏRİ
+                  </span>
+                  {[
+                    "Rudder",
+                    "Romantik",
+                    "Secret",
+                    "Speed",
+                    "Envy",
+                    "Mery",
+                  ].map((item, idx) => (
+                    <a
+                      key={idx}
+                      href="#"
+                      className="text-[var(--custom-gray)] hover:text-[var(--custom-red)] transition-colors duration-300"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </li>
+
+            <li className="group relative">
+              <a
+                style={{ fontFamily: "Playfair Display" }}
+                href="#"
+                className="mb-1 flex items-center text-xl uppercase font-semibold text-[var(--custom-black)] transition-all duration-300"
+              >
+                İYDƏ PERFUMERY
+                <FaChevronDown className="ml-2 group-hover:-rotate-180 transition-transform duration-300" />
+              </a>
+
+              {/* underline */}
+              <div className="h-1 w-full bg-(--custom-black) absolute bottom-0 left-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></div>
+
+              {/* Dropdown */}
+              <div className="absolute top-full left-0 z-50 w-[400px] rounded-xl bg-white shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 p-6 flex space-x-8">
+                {/* Column 1 */}
+                <div className="flex flex-col space-y-2 text-sm">
+                  <span className="font-bold text-[var(--custom-black)]">
+                    ÖZƏL KOLLEKSİYA
+                  </span>
+                  {[
+                    "Yeddi gözəl",
+                    "Xəmsə",
+                    "Qarabağ",
+                    "Sport",
+                    "Baku",
+                    "Baldini",
+                    "Day&Night",
+                    "Kids",
+                    "Twins",
+                    "Love",
+                    "Billionarie",
+                  ].map((item, idx) => (
+                    <a
+                      key={idx}
+                      href="#"
+                      className="text-[var(--custom-gray)] hover:text-[var(--custom-red)] transition-colors duration-300"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+
+                {/* Column 2 */}
+                <div className="flex flex-col space-y-2 text-sm">
+                  <span className="font-bold text-[var(--custom-black)]">
+                    BRENDLƏR
+                  </span>
+                  {[
+                    "Kişi ətirləri",
+                    "Qadın ətirləri",
+                    "Unisex ətirlər",
+                    "Uşaq ətirləri",
+                  ].map((item, idx) => (
+                    <a
+                      key={idx}
+                      href="#"
+                      className="text-[var(--custom-gray)] hover:text-[var(--custom-red)] transition-colors duration-300"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+
+                {/* Column 3 */}
+                <div className="flex flex-col space-y-2 text-sm">
+                  <span className="font-bold text-[var(--custom-black)]">
+                    MAŞIN ƏTİRLƏRİ
+                  </span>
+                  {[
+                    "Rudder",
+                    "Romantik",
+                    "Secret",
+                    "Speed",
+                    "Envy",
+                    "Mery",
+                  ].map((item, idx) => (
+                    <a
+                      key={idx}
+                      href="#"
+                      className="text-[var(--custom-gray)] hover:text-[var(--custom-red)] transition-colors duration-300"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </li>
+
+            <li className="group relative">
+              <a
+                style={{ fontFamily: "Playfair Display" }}
+                href="#"
+                className="mb-1 flex items-center text-xl uppercase font-semibold text-[var(--custom-black)] transition-all duration-300"
+              >
+                DƏSTƏK
+                <FaChevronDown className="ml-2 group-hover:-rotate-180 transition-transform duration-300" />
+              </a>
+
+              {/* underline */}
+              <div className="h-1 w-full bg-(--custom-black) absolute bottom-0 left-0 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></div>
+
+              {/* Dropdown */}
+              <div className="absolute top-full left-0 z-50 w-[400px] rounded-xl bg-white shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 p-6 flex space-x-8">
+                {/* Column 1 */}
+                <div className="flex flex-col space-y-2 text-sm">
+                  <span className="font-bold text-[var(--custom-black)]">
+                    ÖZƏL KOLLEKSİYA
+                  </span>
+                  {[
+                    "Yeddi gözəl",
+                    "Xəmsə",
+                    "Qarabağ",
+                    "Sport",
+                    "Baku",
+                    "Baldini",
+                    "Day&Night",
+                    "Kids",
+                    "Twins",
+                    "Love",
+                    "Billionarie",
+                  ].map((item, idx) => (
+                    <a
+                      key={idx}
+                      href="#"
+                      className="text-[var(--custom-gray)] hover:text-[var(--custom-red)] transition-colors duration-300"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+
+                {/* Column 2 */}
+                <div className="flex flex-col space-y-2 text-sm">
+                  <span className="font-bold text-[var(--custom-black)]">
+                    BRENDLƏR
+                  </span>
+                  {[
+                    "Kişi ətirləri",
+                    "Qadın ətirləri",
+                    "Unisex ətirlər",
+                    "Uşaq ətirləri",
+                  ].map((item, idx) => (
+                    <a
+                      key={idx}
+                      href="#"
+                      className="text-[var(--custom-gray)] hover:text-[var(--custom-red)] transition-colors duration-300"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+
+                {/* Column 3 */}
+                <div className="flex flex-col space-y-2 text-sm">
+                  <span className="font-bold text-[var(--custom-black)]">
+                    MAŞIN ƏTİRLƏRİ
+                  </span>
+                  {[
+                    "Rudder",
+                    "Romantik",
+                    "Secret",
+                    "Speed",
+                    "Envy",
+                    "Mery",
+                  ].map((item, idx) => (
+                    <a
+                      key={idx}
+                      href="#"
+                      className="text-[var(--custom-gray)] hover:text-[var(--custom-red)] transition-colors duration-300"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <hr className="text-(--custom-border)" />
       </div>
     </div>
   );
