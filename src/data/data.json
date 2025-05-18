@@ -3,72 +3,108 @@
     "id": 1,
     "img": "https://api.iyde.az/uploads/2022/03/10/thumbnail/acqua-di-parmamagnolia-nobile_1564579500.jpg",
     "name": "Acqua di Parma Magnolia Nobile",
-    "price": 130
+    "price": 130,
+    "brand": "Acqua Di Parma",
+    "category": "Women",
+    "scentNotes": ["Floral", "Citrus"]
   },
   {
     "id": 2,
     "img": "https://api.iyde.az/uploads/2022/03/31/thumbnail/94_ADS007027_mainGT.jpg",
     "name": "Adidas Ice Dive",
-    "price": 85
+    "price": 85,
+    "brand": "Adidas",
+    "category": "Men",
+    "scentNotes": ["Fresh", "Aquatic"]
   },
   {
     "id": 3,
     "img": "https://api.iyde.az/uploads/2022/04/07/thumbnail/98_agent-provocateuragent-provocateur_1564579588.jpg",
     "name": "Agent Provocateur Agent Provocateur",
-    "price": 110
+    "price": 110,
+    "brand": "Agent Provocateur",
+    "category": "Women",
+    "scentNotes": ["Floral", "Amber"]
   },
   {
     "id": 4,
     "img": "https://api.iyde.az/uploads/2022/04/07/thumbnail/58_agonist-solaris_1564579627.jpg",
     "name": "Agonist Solaris",
-    "price": 120
+    "price": 120,
+    "brand": "Agonist",
+    "category": "Unisex",
+    "scentNotes": ["Woody", "Spicy"]
   },
   {
     "id": 5,
     "img": "https://api.iyde.az/uploads/2023/08/21/thumbnail/34_amber-musk.jpg",
     "name": "Ajmal Amber Musc",
-    "price": 65
+    "price": 65,
+    "brand": "Ajmal",
+    "category": "Women",
+    "scentNotes": ["Amber", "Musk"]
   },
   {
     "id": 6,
     "img": "https://api.iyde.az/uploads/2022/03/10/thumbnail/ajmal-amber-wood_1564579649.png",
     "name": "Ajmal Amber Wood",
-    "price": 180
+    "price": 180,
+    "brand": "Ajmal",
+    "category": "Unisex",
+    "scentNotes": ["Amber", "Woody"]
   },
   {
     "id": 7,
     "img": "https://api.iyde.az/uploads/2022/04/07/thumbnail/55_ajmal-qafiya-1_1564579673.jpg",
     "name": "Ajmal Qafiya 1",
-    "price": 110
+    "price": 110,
+    "brand": "Ajmal",
+    "category": "Men",
+    "scentNotes": ["Spicy", "Woody"]
   },
   {
     "id": 8,
     "img": "https://api.iyde.az/uploads/2022/03/10/thumbnail/alexandre-j-silver-ombre_1564580429.jpg",
     "name": "Alexandre J. Silver Ombre",
-    "price": 120
+    "price": 120,
+    "brand": "Alexandre J.",
+    "category": "Unisex",
+    "scentNotes": ["Amber", "Oriental"]
   },
   {
     "id": 9,
     "img": "https://api.iyde.az/uploads/2022/04/07/thumbnail/72_amouage-journey_1564818640.jpg",
     "name": "Amouage Journey",
-    "price": 155
+    "price": 155,
+    "brand": "Amouage",
+    "category": "Men",
+    "scentNotes": ["Spicy", "Leather"]
   },
   {
     "id": 10,
     "img": "https://api.iyde.az/uploads/2022/04/07/36_chanel-chance-eau-de-parfum_1564822392.jpg",
     "name": "Chanel Chance",
-    "price": 180
+    "price": 180,
+    "brand": "Chanel",
+    "category": "Women",
+    "scentNotes": ["Floral", "Fruity"]
   },
   {
     "id": 11,
     "img": "https://api.iyde.az/uploads/2022/03/10/yves-saint-laurent-libre_1580717727.png",
     "name": "YSL Libre",
-    "price": 170
+    "price": 170,
+    "brand": "YSL",
+    "category": "Women",
+    "scentNotes": ["Lavender", "Vanilla"]
   },
   {
     "id": 12,
     "img": "https://api.iyde.az/uploads/2022/04/07/56_victorias-secret-bombshell_1564819593.jpg",
     "name": "VS Bombshell",
-    "price": 90
+    "price": 90,
+    "brand": "Victoria's Secret",
+    "category": "Women",
+    "scentNotes": ["Fruity", "Floral"]
   }
 ]
