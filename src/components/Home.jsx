@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 import { DataContext } from "../contexts/dataContext";
+import { RiCloseLargeFill } from "react-icons/ri";
+import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 
 const Home = () => {
   const { data, brands, notes, categories, priceRanges, loading } =
@@ -9,6 +11,11 @@ const Home = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedNotes, setSelectedNotes] = useState([]);
   const [selectedPrices, setSelectedPrices] = useState([]);
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const [isBrandsOpen, setIsBrandsOpen] = useState(false);
+  const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
+  const [isPriceOpen, setIsPriceOpen] = useState(false);
+  const [isNotesOpen, setIsNotesOpen] = useState(false);
 
   const handleCheckboxChange = (value, setter, selected) => {
     if (selected.includes(value)) {
@@ -47,13 +54,211 @@ const Home = () => {
   });
 
   return (
-    <div className="container py-16 md:py-8">
+    <div className="container py-16 md:py-8 relative">
       <p className="text-xl font-bold text-center md:text-left md:text-2xl">
         Ətirlər
       </p>
       <p className="text-gray-600 text-md text-center md:text-left md:text-md">
         <span>{filteredData.length}</span> nəticə
       </p>
+
+      <div className="flex items-center space-x-4 my-6 md:hidden">
+        <button className="w-1/2 border border-(--custom-border) rounded-full px-6 py-1 text-sm  font-semibold">
+          A-dan Z-yə
+        </button>
+        <button
+          className="w-1/2 border border-(--custom-border) rounded-full px-6 py-1 text-sm  font-semibold"
+          onClick={() => setIsMobileFilterOpen(true)}
+        >
+          Filter
+        </button>
+      </div>
+
+      {/* MOLBILE FILTER */}
+      {isMobileFilterOpen && (
+        <div className="container py-4 flex flex-col justify-between space-y-4 h-dvh w-full bg-white absolute top-0 left-0 z-20 overflow-scroll">
+          <div>
+            <div className="flex justify-between items-center w-full h-20">
+              <RiCloseLargeFill
+                className="text-2xl"
+                onClick={() => setIsMobileFilterOpen(false)}
+              />
+
+              <span className="text-2xl font-semibold">Filter</span>
+
+              <div className="font-medium text-sm">Filteri təmizlə</div>
+            </div>
+
+            <ul className="flex flex-col space-y-4 relative">
+              <li
+                className="flex flex-col text-lg font-semibold"
+                onClick={() => setIsBrandsOpen(!isBrandsOpen)}
+              >
+                <span
+                  style={{ fontFamily: "Playfair Display" }}
+                  className="flex items-center justify-between"
+                >
+                  Brendlər
+                  {isBrandsOpen ? <FaChevronDown /> : <FaChevronRight />}
+                </span>
+
+                {brands.map((brand) => (
+                  <div
+                    key={brand}
+                    className={`${
+                      isBrandsOpen ? "flex items-center space-x-2" : "hidden"
+                    }`}
+                  >
+                    <input
+                      type="checkbox"
+                      id={brand}
+                      checked={selectedBrands.includes(brand)}
+                      onChange={() =>
+                        handleCheckboxChange(
+                          brand,
+                          setSelectedBrands,
+                          selectedBrands
+                        )
+                      }
+                    />
+                    <label
+                      htmlFor={brand}
+                      className="text-lg font-medium cursor-pointer hover:text-(--custom-red) transition-all duration-300"
+                    >
+                      {brand}
+                    </label>
+                  </div>
+                ))}
+              </li>
+
+              <li
+                className="flex flex-col text-lg font-semibold"
+                onClick={() => setIsCategoriesOpen(!isCategoriesOpen)}
+              >
+                <span
+                  style={{ fontFamily: "Playfair Display" }}
+                  className="flex items-center justify-between"
+                >
+                  Kateqoriyalar
+                  {isCategoriesOpen ? <FaChevronDown /> : <FaChevronRight />}
+                </span>
+
+                {categories.map((cat) => (
+                  <div
+                    key={cat}
+                    className={`${
+                      isCategoriesOpen
+                        ? "flex items-center space-x-2"
+                        : "hidden"
+                    }`}
+                  >
+                    <input
+                      type="checkbox"
+                      id={cat}
+                      checked={selectedCategories.includes(cat)}
+                      onChange={() =>
+                        handleCheckboxChange(
+                          cat,
+                          setSelectedCategories,
+                          selectedCategories
+                        )
+                      }
+                    />
+                    <label
+                      htmlFor={cat}
+                      className="text-lg font-medium cursor-pointer hover:text-(--custom-red) transition-all duration-300"
+                    >
+                      {cat}
+                    </label>
+                  </div>
+                ))}
+              </li>
+
+              <li
+                className="flex flex-col text-lg font-semibold"
+                onClick={() => setIsPriceOpen(!isPriceOpen)}
+              >
+                <span
+                  style={{ fontFamily: "Playfair Display" }}
+                  className="flex items-center justify-between"
+                >
+                  Qiymət
+                  {isPriceOpen ? <FaChevronDown /> : <FaChevronRight />}
+                </span>
+
+                {priceRanges.map((range) => (
+                  <div
+                    key={range.label}
+                    className={`${
+                      isPriceOpen ? "flex items-center space-x-2" : "hidden"
+                    }`}
+                  >
+                    <input
+                      type="checkbox"
+                      id={range.label}
+                      checked={selectedPrices.some(
+                        (r) => r.label === range.label
+                      )}
+                      onChange={() => handlePriceChange(range)}
+                    />
+                    <label
+                      htmlFor={range.label}
+                      className="text-lg font-medium cursor-pointer hover:text-(--custom-red) transition-all duration-300"
+                    >
+                      {range.label}
+                    </label>
+                  </div>
+                ))}
+              </li>
+
+              <li
+                className="flex flex-col text-lg font-semibold"
+                onClick={() => setIsNotesOpen(!isNotesOpen)}
+              >
+                <span
+                  style={{ fontFamily: "Playfair Display" }}
+                  className="flex items-center justify-between"
+                >
+                  Notlar
+                  {isNotesOpen ? <FaChevronDown /> : <FaChevronRight />}
+                </span>
+
+                {notes.map((note) => (
+                  <div
+                    key={note}
+                    className={`${
+                      isNotesOpen ? "flex items-center space-x-2" : "hidden"
+                    }`}
+                  >
+                    <input
+                      type="checkbox"
+                      id={note}
+                      checked={selectedNotes.includes(note)}
+                      onChange={() =>
+                        handleCheckboxChange(
+                          note,
+                          setSelectedNotes,
+                          selectedNotes
+                        )
+                      }
+                    />
+                    <label htmlFor={note} className="text-lg font-medium">
+                      {note}
+                    </label>
+                  </div>
+                ))}
+              </li>
+            </ul>
+          </div>
+
+          <button
+            className="bg-(--custom-green) rounded-full py-2 text-white font-semibold"
+            onClick={() => setIsMobileFilterOpen(false)}
+          >
+            Filter
+          </button>
+        </div>
+      )}
 
       <div className="flex space-x-6 mt-4">
         {/* Filters Section */}
@@ -208,7 +413,7 @@ const Home = () => {
                   alt={parfume.name}
                   className="w-full h-full object-contain"
                 />
-                <button className="w-full rounded-full bg-white py-1 font-semibold cursor-pointer scale-y-0 group-hover:scale-y-100 origin-bottom transition-all duration-300 absolute bottom-1 hover:bg-(--hover-color)">
+                <button className="w-full rounded-full bg-white py-1  font-semibold cursor-pointer scale-y-0 group-hover:scale-y-100 origin-bottom transition-all duration-300 absolute bottom-1 hover:bg-(--hover-color)">
                   Səbətə əlavə et
                 </button>
               </div>

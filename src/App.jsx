@@ -6,10 +6,8 @@ import { ContextProvider } from "./contexts/dataContext";
 const App = () => {
   return (
     <ContextProvider>
-      <div>
-        <Navbar />
-        <Home />
-      </div>
+      <Navbar />
+      <Home />
     </ContextProvider>
   );
 };

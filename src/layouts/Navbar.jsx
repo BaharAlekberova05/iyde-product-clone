@@ -243,6 +243,7 @@ const Navbar = () => {
 
             <div className="relative w-full">
               <input
+                name="search"
                 type="text"
                 placeholder="Öz ətrini axtar"
                 className="w-full rounded-3xl py-2 px-8 border border-(--custom-input-border) outline-none placeholder:text-(--custom-black) placeholder:font-semibold"
