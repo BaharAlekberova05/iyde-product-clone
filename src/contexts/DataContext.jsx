@@ -23,8 +23,43 @@ export const ContextProvider = ({ children }) => {
     fetchData();
   }, []);
 
+  const brands = [
+    "Acqua Di Parma",
+    "Adidas",
+    "Agent Provocateur",
+    "Agonist",
+    "Ajmal",
+    "Alexandre J.",
+    "Amouage",
+    "Chanel",
+    "YSL",
+    "Victoria's Secret",
+  ];
+  const notes = [
+    "Floral",
+    "Fresh",
+    "Woody",
+    "Spicy",
+    "Oriental",
+    "Musk",
+    "Fruity",
+    "Citrus",
+    "Amber",
+    "Sweet",
+  ];
+  const categories = ["Women", "Men", "Unisex"];
+
+  const priceRanges = [
+    { label: "0-50 AZN", min: 0, max: 50 },
+    { label: "50-100 AZN", min: 50, max: 100 },
+    { label: "100-200 AZN", min: 100, max: 200 },
+    { label: "200 və daha çox", min: 200, max: Infinity },
+  ];
+
   return (
-    <DataContext.Provider value={{ data, loading }}>
+    <DataContext.Provider
+      value={{ data, brands, notes, categories, priceRanges, loading }}
+    >
       {children}
     </DataContext.Provider>
   );

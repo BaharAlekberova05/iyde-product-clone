@@ -6,7 +6,7 @@
     "price": 130,
     "brand": "Acqua Di Parma",
     "category": "Women",
-    "scentNotes": ["Floral", "Citrus"]
+    "notes": ["Floral", "Citrus"]
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "price": 85,
     "brand": "Adidas",
     "category": "Men",
-    "scentNotes": ["Fresh", "Aquatic"]
+    "notes": ["Fresh", "Aquatic"]
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "price": 110,
     "brand": "Agent Provocateur",
     "category": "Women",
-    "scentNotes": ["Floral", "Amber"]
+    "notes": ["Floral", "Amber"]
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "price": 120,
     "brand": "Agonist",
     "category": "Unisex",
-    "scentNotes": ["Woody", "Spicy"]
+    "notes": ["Woody", "Spicy"]
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "price": 65,
     "brand": "Ajmal",
     "category": "Women",
-    "scentNotes": ["Amber", "Musk"]
+    "notes": ["Amber", "Musk"]
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "price": 180,
     "brand": "Ajmal",
     "category": "Unisex",
-    "scentNotes": ["Amber", "Woody"]
+    "notes": ["Amber", "Woody"]
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "price": 110,
     "brand": "Ajmal",
     "category": "Men",
-    "scentNotes": ["Spicy", "Woody"]
+    "notes": ["Spicy", "Woody"]
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "price": 120,
     "brand": "Alexandre J.",
     "category": "Unisex",
-    "scentNotes": ["Amber", "Oriental"]
+    "notes": ["Amber", "Oriental"]
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "price": 155,
     "brand": "Amouage",
     "category": "Men",
-    "scentNotes": ["Spicy", "Leather"]
+    "notes": ["Spicy", "Leather"]
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "price": 180,
     "brand": "Chanel",
     "category": "Women",
-    "scentNotes": ["Floral", "Fruity"]
+    "notes": ["Floral", "Fruity"]
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "price": 170,
     "brand": "YSL",
     "category": "Women",
-    "scentNotes": ["Lavender", "Vanilla"]
+    "notes": ["Lavender", "Vanilla"]
   },
   {
     "id": 12,
@@ -105,6 +105,6 @@
     "price": 90,
     "brand": "Victoria's Secret",
     "category": "Women",
-    "scentNotes": ["Fruity", "Floral"]
+    "notes": ["Fruity", "Floral"]
   }
 ]
