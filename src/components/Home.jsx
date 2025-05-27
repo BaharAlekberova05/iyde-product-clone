@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { DataContext } from "../contexts/dataContext";
+import { DataContext } from "../contexts/DataContext";
 import { RiCloseLargeFill } from "react-icons/ri";
 import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 
